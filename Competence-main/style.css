@@ -1,0 +1,801 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    display: block;
+    background: url('./img/84/calendar.png') no-repeat;
+    width: 12px;
+    height: 13px;
+    margin: 0;
+    justify-content: right;
+}
+
+.field-icon {
+    float: right;
+    margin-right: 6px;
+    margin-top: -22px;
+    position: relative;
+    z-index: 2;
+}
+
+.custom02 input[type="radio"] {
+	display: none;
+}
+.custom02 label {
+	position: relative;
+	display: inline-block;
+	padding: 3px 3px 3px 20px;
+	cursor: pointer;
+}
+.custom02 label::before,
+.custom02 label::after {
+	position: absolute;
+	content: '';
+	top: 50%;
+	border-radius: 100%;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+.custom02 label::before {
+	left: 0;
+	width: 14px;
+	height: 14px;
+	margin-top: -8px;
+	background: #f3f3f3;
+	border: 1px solid #ccc;
+}
+.custom02 label:hover::before {
+	background: #fff;
+}
+.custom02 label::after {
+	opacity: 0;
+	left: 3px;
+	width: 8px;
+	height: 8px;
+	margin-top: -5px;
+	background: #3498db;
+	-webkit-transform: scale(2);
+	transform: scale(2);
+}
+.custom02 input[type="radio"]:checked + label::before {
+	background: #fff;
+	border: 1px solid #3498db;
+}
+.custom02 input[type="radio"]:checked + label::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+#style-2::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 4px;
+    height: 4px;
+    border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgba(97, 94, 255, 1);
+}
+
+.btn-cancel{
+    border: 0; 
+    outline: none !important;
+    background-color: transparent !important;
+    color: #8B8B8B;
+    font-size: 12px;
+}
+
+.btn-upload{
+    border: 0; 
+    outline: none !important; 
+    color: #FFFFFF; 
+    background-color: #1B8BCE; 
+    border-radius: 2px;
+    height: 30px;
+    width: 62px;
+    font-size: 12px;
+}
+
+.modal-dialog{
+    margin-top: 63px;
+}
+
+.drag-drop1 {
+    background: #FFFFFF;
+    border: 2px dashed #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: relative;
+}
+
+.drag-file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.color-blue {
+    color: #42A4DF !important;
+}
+
+
+.wrapper{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.wrapper .title{
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.select_wrap{
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap .default_option{
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select_wrap .default_option li{
+    padding: 2px 10px;
+    border: 1px solid #ced4da !important;
+    border-radius: 3px !important;
+    font-size: 11px !important;
+}
+
+.select_wrap .default_option:before{
+    content: "";
+    background-image: url('./img/85/Arrow\ 1.png');
+    position: absolute;
+    top: 13px !important;
+    right: 10px;
+    width: 10px;
+    height: 6px;
+}
+
+.select_wrap .select_ul{
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px;
+    border: 1px solid #ced4da !important;
+    border-top: 0px !important;
+    display: none;
+}
+
+.select_wrap .select_ul li{
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 11px !important;
+}
+
+.select_wrap .select_ul li:first-child:hover{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.select_wrap .select_ul li:last-child:hover{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.select_wrap .select_ul {
+    padding-inline-start: 0px !important;
+}
+
+.select_wrap .option{
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap .option .icon {
+    background: url('./img/85/security.png') no-repeat;
+    background-size: contain;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 5px;
+}
+
+.select_wrap .option .icon1 {
+    background: url('./img/85/icon\ \(3\).png');
+    background-size: contain;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 5px;
+}
+
+.select_wrap.active .select_ul{
+    display: block;
+}
+
+
+
+
+
+
+.select_wrap1{
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap1 .default_option1{
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select_wrap1 .default_option1 li{
+    padding: 2px 10px;
+    border: 1px solid #ced4da !important;
+    border-radius: 3px !important;
+    font-size: 11px !important;
+}
+
+.select_wrap1 .default_option1:before{
+    content: "";
+    background-image: url('./img/85/Arrow\ 1.png');
+    position: absolute;
+    top: 13px !important;
+    right: 10px;
+    width: 10px;
+    height: 6px;
+}
+
+.select_wrap1 .select_ul1{
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px;
+    border: 1px solid #ced4da !important;
+    border-top: 0px !important;
+    display: none;
+}
+
+.select_wrap1 .select_ul1 li{
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 11px !important;
+}
+
+.select_wrap1 .select_ul1 li:first-child:hover{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.select_wrap1 .select_u1l li:last-child:hover{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.select_wrap1 .select_ul1 {
+    padding-inline-start: 0px !important;
+}
+
+.select_wrap1 .option{
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap1 .option .icon {
+    background: url('./img/85/icon\ \(3\).png');
+    background-size: contain;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 5px;
+}
+
+.select_wrap1 .option .icon1 {
+    background: url('./img/85/security.png') no-repeat;
+    background-size: contain;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 5px;
+}
+
+.select_wrap1.active .select_ul1{
+    display: block;
+}
+  
+
+
+
+
+
+
+.select_wrap2{
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap2 .default_option2{
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select_wrap2 .default_option2 li{
+    padding: 2px 10px;
+    border: 1px solid #ced4da !important;
+    border-radius: 3px !important;
+    font-size: 11px !important;
+}
+
+.select_wrap2 .default_option2:before{
+    content: "";
+    background-image: url('./img/85/Arrow\ 1.png');
+    position: absolute;
+    top: 13px !important;
+    right: 10px;
+    width: 10px;
+    height: 6px;
+}
+
+.select_wrap2 .select_ul2{
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px;
+    border: 1px solid #ced4da !important;
+    border-top: 0px !important;
+    display: none;
+}
+
+.select_wrap2 .select_ul2 li{
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 11px !important;
+}
+
+.select_wrap2 .select_ul2 li:first-child:hover{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.select_wrap2 .select_ul2 li:last-child:hover{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.select_wrap2 .select_ul2 {
+    padding-inline-start: 0px !important;
+}
+
+.select_wrap2 .option{
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap2 .option .icon {
+    background: url('./img/85/icon\ \(3\).png');
+    background-size: contain;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 5px;
+}
+
+.select_wrap2 .option .icon1 {
+    background: url('./img/85/security.png') no-repeat;
+    background-size: contain;
+    min-width: 25px;
+    min-height: 25px;
+    margin-right: 5px;
+}
+
+.select_wrap2.active .select_ul2{
+    display: block;
+}
+
+
+
+
+ul li{
+    list-style: none;
+}
+
+
+.tc-grey {
+    color: rgba(92, 87, 97, 0.5);
+}
+
+.fw-normal {
+    font-weight: normal;
+    color: #200E32;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fs-10 {
+    font-size: 10px !important;
+    line-height: 12px !important;
+}
+
+.fs-11 {
+    font-size: 11px !important;
+    line-height: 13px !important;
+}
+
+.fs-12 {
+    font-size: 12px !important;
+    line-height: 14px !important;
+}
+
+.fs-13 {
+    font-size: 13px !important;
+    line-height: 15px !important;
+}
+
+.fs-14 {
+    font-size: 14px !important;
+    line-height: 16px !important;
+}
+
+.fs-15 {
+    font-size: 15px !important;
+    line-height: 17px !important;
+}
+
+.fs-16 {
+    font-size: 16px !important;
+    line-height: 18px !important;
+}
+
+.fs-17 {
+    font-size: 17px !important;
+    line-height: 19px !important;
+}
+
+.fs-18 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.fs-19 {
+    font-size: 19px;
+    line-height: 21px;
+}
+
+.fs-20 {
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.fs-22 {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.fs-27 {
+    font-size: 27px;
+    line-height: 29px;
+}
+
+@media screen and (max-width: 1450px) {
+    
+    .fs-10 {
+        font-size: 9px !important;
+        line-height: 11px !important;
+    }
+
+    .mr-28 {
+        margin-right: 22px;
+    }
+    
+    .fs-11 {
+        font-size: 10px !important;
+        line-height: 11.5px !important;
+    }
+    
+    .fs-12 {
+        font-size: 11px !important;
+        line-height: 13px !important;
+    }
+    
+    .fs-13 {
+        font-size: 12px !important;
+        line-height: 14px !important;
+    }
+
+    .fs-14 {
+        font-size: 13px !important;
+        line-height: 15px !important;
+    }
+    
+    .fs-15 {
+        font-size: 14px !important;
+        line-height: 16px !important;
+    }
+
+    .fs-16 {
+        font-size: 15px !important;
+        line-height: 17px !important;
+    }
+    
+    .fs-17 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .fs-18 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+    
+    .fs-19 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .fs-20 {
+        font-size: 19px;
+        line-height: 20px;
+    }
+
+    .fs-22 {
+        font-size: 21px;
+        line-height: 23px;
+    }
+    
+    .fs-27 {
+        font-size: 25px;
+        line-height: 27px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    
+    .btn-set-width-50 {
+        width: 49% !important;
+    }
+
+    .adjust-btn-upload {
+        display: grid !important;
+        align-items: flex-end;
+    }
+
+    .adjust-badges-alignment div {
+        margin-top: 1px;
+        margin-right: auto;
+    }
+
+    .adj-mr-auto {
+        margin-right: auto !important;
+    }
+
+    .sign-img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+@media (min-width: 890px) and (max-width: 1280px) {
+    .col-ml-4 {
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    .fs-10 {
+        font-size: 8px !important;
+        line-height: 10px !important;
+    }
+
+    .fs-11 {
+        font-size: 9px !important;
+        line-height: 11px !important;
+    }
+    
+    .fs-12 {
+        font-size: 10px !important;
+        line-height: 12px !important;
+    }    
+
+    .fs-13 {
+        font-size: 11px !important;
+        line-height: 13px !important;
+    }
+
+    .fs-14 {
+        font-size: 12px !important;
+        line-height: 14px !important;
+    }
+    
+    .fs-15 {
+        font-size: 13px !important;
+        line-height: 15px !important;
+    }
+    
+    .fs-16 {
+        font-size: 14px !important;
+        line-height: 16px !important;
+    }
+
+    .fs-17 {
+        font-size: 14px !important;
+        line-height: 16px !important;
+    }
+
+    .fs-18 {
+        font-size: 16px !important;
+        line-height: 18px !important;
+    }
+
+    .fs-19 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fs-20 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .fs-22 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    
+    .fs-27 {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+}
+
+@media screen and (max-width: 1150px) {
+    
+    .set-rd-height {
+        height: 520px !important;
+    }
+
+    .mt-20 {
+        margin-top: 0px !important;
+    }
+
+    .hr-adjust-margin {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .col-adj {
+        width: 100% !important;
+    }
+
+    .col-adj div.d-flex {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 890px) {
+
+    .fs-10 {
+        font-size: 8px !important;
+        line-height: 10px !important;
+    }
+    
+    .fs-11 {
+        font-size: 8px !important;
+        line-height: 10px !important;
+    }
+    
+    .fs-12 {
+        font-size: 9px !important;
+        line-height: 11px !important;
+    }    
+
+    .fs-13 {
+        font-size: 9px !important;
+        line-height: 11px !important;
+    }
+
+    .fs-14 {
+        font-size: 10px !important;
+        line-height: 12px !important;
+    }
+    
+    .fs-15 {
+        font-size: 11px !important;
+        line-height: 13px !important;
+    }
+    
+    .fs-16 {
+        font-size: 12px !important;
+        line-height: 14px !important;
+    }
+
+    .fs-17 {
+        font-size: 13px !important;
+        line-height: 15px !important;
+    }
+
+    .fs-18 {
+        font-size: 14px !important;
+        line-height: 16px !important;
+    }
+
+    .fs-19 {
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+    .fs-20 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .fs-22 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .fs-27 {
+        font-size: 19px;
+        line-height: 21px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
